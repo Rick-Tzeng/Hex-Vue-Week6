@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkhomework"]=self["webpackChunkhomework"]||[]).push([[174],{3174:function(e,n,r){r.r(n),r.d(n,{default:function(){return i}});var t=r(3396);const s={class:"about"},c=(0,t._)("h2",{class:"fw-bold mb-5"},"關於我們",-1),o=(0,t._)("p",{class:"h1 text-center"},"⚠🚧還在施工中...⚠",-1),u=[c,o];function a(e,n){return(0,t.wg)(),(0,t.iD)("div",s,u)}var f=r(89);const h={},l=(0,f.Z)(h,[["render",a]]);var i=l}}]);
+//# sourceMappingURL=174.726d9af4.js.map
