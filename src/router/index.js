@@ -55,6 +55,18 @@ const routes = [
       },
     ],
   },
+  {
+    path: '/:pathMatch(.*)*',
+    name: '404頁面',
+    component: () => import('../views/NotFound.vue'),
+  },
+  {
+    path: '/admin/:pathMatch(.*)*',
+    name: '重新導向',
+    redirect: {
+      name: '後台',
+    },
+  },
 ];
 
 const router = createRouter({
