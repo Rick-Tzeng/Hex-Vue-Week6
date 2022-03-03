@@ -1,25 +1,66 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-import HomeView from '../views/HomeView.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView,
+    name: '前台',
+    component: () => import('../views/FrontView.vue'),
+    children: [
+      {
+        path: '',
+        name: '首頁',
+        component: () => import('../views/HomeView.vue'),
+      },
+      {
+        path: 'about',
+        name: '關於我們',
+        component: () => import('../views/AboutView.vue'),
+      },
+      {
+        path: 'allProducts',
+        name: '相關產品',
+        component: () => import('../views/AllProductsView.vue'),
+      },
+      {
+        path: 'product/:id',
+        name: '單一產品內容',
+        component: () => import('../views/ProductView.vue'),
+      },
+      {
+        path: 'cart',
+        name: '我的購物車',
+        component: () => import('../views/CartView.vue'),
+      },
+    ],
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
+    path: '/login',
+    name: '登入頁面',
+    component: () => import('../views/LoginView.vue'),
+  },
+  {
+    path: '/admin',
+    name: '後台',
+    component: () => import('../views/DashboardView.vue'),
+    children: [
+      {
+        path: 'allProducts',
+        name: '產品列表',
+        component: () => import('../views/Dashboard/AllProductsView.vue'),
+      },
+      {
+        path: 'orders',
+        name: '客戶訂單',
+        component: () => import('../views/Dashboard/OrdersView.vue'),
+      },
+    ],
   },
 ];
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
+  linkExactActiveClass: 'activated',
 });
 
 export default router;
