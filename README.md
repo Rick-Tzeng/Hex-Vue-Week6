@@ -4,9 +4,11 @@ Hex Vue Week 6 Assignment
 
 ## 運作環境
 
-NVM 版本：v1.1.9
+nvm 版本：v1.1.9
+
 Node 版本：v16.14.0
-NPM 版本：v8.5.1
+
+npm 版本：v8.5.1
 
 ## Project setup
 
